@@ -1,0 +1,119 @@
+# Lamorim das Promoções - Bot de Alertas
+
+🤖 Este é um bot Telegram que envia alertas personalizados para usuários com base em palavras-chave cadastradas. O bot monitora um canal específico e, quando encontra palavras cadastradas pelos usuários, envia o link do post e encaminha a mensagem original.
+
+---
+
+## Funcionalidades
+
+- ✅ Cadastrar palavras-chave com `/add palavra`.
+- 📋 Listar suas palavras-chave com `/lista`.
+- 🗑 Apagar uma palavra específica com `/apagar palavra`.
+- 😱 Apagar todas as palavras com `/apagartudo`.
+- ☕ Mensagem de doação com `/doar`.
+- 📢 Envio de alertas quando uma palavra-chave é encontrada em uma postagem do canal.
+- 📤 Encaminha a mensagem original do canal antes do alerta.
+- Mensagem especial para a palavra-chave `cupom shopee`.
+
+---
+
+## Requisitos
+
+- Python 3.10 ou superior
+- Bibliotecas necessárias:
+
+```txt
+telepot>=12.7
+python-telegram-bot>=20.0
+openai>=1.29.0
+tweepy>=4.25.0
+Instalação
+Clone este repositório:
+
+bash
+Copiar código
+git clone https://github.com/seuusuario/lamorim-promocoes-bot.git
+cd lamorim-promocoes-bot
+Crie um ambiente virtual (opcional, mas recomendado):
+
+bash
+Copiar código
+python -m venv venv
+source venv/bin/activate  # Linux / macOS
+venv\Scripts\activate     # Windows
+Instale as dependências:
+
+bash
+Copiar código
+pip install -r requirements.txt
+Configuração
+Crie um arquivo .telegram_bot_secret na raiz do projeto com as seguintes variáveis:
+
+ini
+Copiar código
+TELEGRAM_BOT_TOKEN=seu_token_aqui
+TELEGRAM_CHANNEL_ID=-1001234567890
+TELEGRAM_CHANNEL_USERNAME=nomedoseucanal
+TELEGRAM_BOT_TOKEN: Token do seu bot no Telegram.
+
+TELEGRAM_CHANNEL_ID: ID numérico do canal a ser monitorado (ex: -1001234567890).
+
+TELEGRAM_CHANNEL_USERNAME: Nome público do canal (ex: lamorimpromos).
+
+Certifique-se de que o bot tem permissão para ler mensagens do canal.
+
+Uso
+Execute o bot:
+
+bash
+Copiar código
+python app.py
+No Telegram, envie /start para iniciar.
+
+Adicione palavras-chave com /add palavra.
+
+Quando o canal postar algo com suas palavras, você receberá:
+
+A mensagem original encaminhada.
+
+Um alerta com a palavra-chave e link do post.
+
+Estrutura do Projeto
+bash
+Copiar código
+lamorim-promocoes-bot/
+├── app.py                    # Código principal do bot
+├── dados_palavras.json       # Armazena palavras-chave dos usuários
+├── .telegram_bot_secret      # Segredos do bot (não versionar)
+├── requirements.txt          # Dependências do projeto
+└── README.md                 # Este arquivo
+Contribuição
+Fork este repositório.
+
+Crie sua branch: git checkout -b minha-nova-funcionalidade.
+
+Commit suas alterações: git commit -m "Minha nova funcionalidade".
+
+Push para a branch: git push origin minha-nova-funcionalidade.
+
+Abra um Pull Request.
+
+Licença
+Este projeto é aberto e pode ser usado e modificado livremente.
+
+💡 Dica: Para melhorar desempenho e tempo de resposta, é recomendado migrar para a versão python-telegram-bot com async, evitando o uso do loop getUpdates.
+
+yaml
+Copiar código
+
+---
+
+Se você quiser, posso também criar **uma versão mais visual e resumida**, com imagens, badges e instruções rápidas, para deixar o README **mais profissional e atraente** para o GitHub.  
+
+Quer que eu faça isso?
+
+
+
+
+
+
